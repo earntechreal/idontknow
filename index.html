@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Voxel World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Crosshair -->
+    <div id="crosshair">+</div>
+
+    <!-- UI Overlay -->
+    <div id="ui-container">
+        
+        <!-- D-Pad (Left) -->
+        <div id="dpad">
+            <div class="dpad-row">
+                <button id="btn-fwd" class="dpad-btn">▲</button>
+            </div>
+            <div class="dpad-row">
+                <button id="btn-left" class="dpad-btn">◀</button>
+                <div class="dpad-center"></div>
+                <button id="btn-right" class="dpad-btn">▶</button>
+            </div>
+            <div class="dpad-row">
+                <button id="btn-back" class="dpad-btn">▼</button>
+            </div>
+        </div>
+
+        <!-- Action Buttons (Right) -->
+        <div id="actions">
+            <div class="action-group">
+                <button id="btn-break" class="action-btn red">BREAK</button>
+                <button id="btn-place" class="action-btn green">PLACE</button>
+            </div>
+            <button id="btn-jump" class="action-btn yellow">JUMP</button>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
