@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Apple Web App Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Voxel World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- START SCREEN (New) -->
+    <div id="start-screen">
+        <div class="logo">VOXEL WORLD</div>
+        <div class="subtitle">Mobile Edition</div>
+        <button id="start-btn">TAP TO PLAY</button>
+        <p class="instruction">For best experience, rotate your phone</p>
+    </div>
+
+    <!-- Crosshair -->
+    <div id="crosshair">+</div>
+
+    <!-- Game UI (Hidden by default) -->
+    <div id="ui-container" style="display: none;">
+        
+        <!-- D-Pad (Left) -->
+        <div id="dpad">
+            <div class="dpad-row">
+                <button id="btn-fwd" class="dpad-btn">▲</button>
+            </div>
+            <div class="dpad-row">
+                <button id="btn-left" class="dpad-btn">◀</button>
+                <div class="dpad-center"></div>
+                <button id="btn-right" class="dpad-btn">▶</button>
+            </div>
+            <div class="dpad-row">
+                <button id="btn-back" class="dpad-btn">▼</button>
+            </div>
+        </div>
+
+        <!-- Action Buttons (Right) -->
+        <div id="actions">
+            <div class="action-group">
+                <button id="btn-break" class="action-btn red">BREAK</button>
+                <button id="btn-place" class="action-btn green">PLACE</button>
+            </div>
+            <button id="btn-jump" class="action-btn yellow">JUMP</button>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
