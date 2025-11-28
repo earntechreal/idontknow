@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    font-family: sans-serif;
+    touch-action: none; /* Disables browser zooming/scrolling */
+    user-select: none;  /* Disables text selection */
+    -webkit-user-select: none;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#crosshair {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    pointer-events: none;
+    z-index: 10;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* UI Container sits on top of canvas */
+#ui-container {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    pointer-events: none; /* Let touches pass through empty spaces */
+}
+
+/* Shared Button Styles */
+button {
+    pointer-events: auto; /* Re-enable clicks for buttons */
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    backdrop-filter: blur(4px);
+    touch-action: manipulation;
+}
+
+button:active {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Movement Layout */
+#movement-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+
+.d-pad-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 2px 0;
+}
+
+.control-btn {
+    width: 50px;
+    height: 50px;
+}
+
+.spacer {
+    width: 50px;
+    height: 50px;
+}
+
+/* Action Layout */
+#action-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.action-row {
+    display: flex;
+    gap: 15px;
+}
+
+.action-btn {
+    width: 70px;
+    height: 70px;
+    font-size: 14px;
+    border-radius: 50%;
+}
+
+.jump-btn {
+    background: rgba(255, 255, 0, 0.2); /* Yellowish */
+}
+
+.break-btn {
+    background: rgba(255, 0, 0, 0.2); /* Reddish */
+}
+
+.place-btn {
+    background: rgba(0, 255, 0, 0.2); /* Greenish */
+}
+
