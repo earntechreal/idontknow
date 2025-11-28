@@ -206,16 +206,21 @@ function animate() {
     const delta = (time - prevTime) / 1000;
     prevTime = time;
 
-    // --- Movement Physics ---
+    // --- Movement Physics Correction ---
     
-    // Calculate forward/right vectors based on current Yaw
-    // We only care about horizontal movement, so we use Sin/Cos of Yaw
+    // forwardX/Z vector (Standard forward based on Yaw)
     const forwardX = -Math.sin(yaw);
     const forwardZ = -Math.cos(yaw);
+    
+    // rightX/Z vector (Strafe Right)
+    // We swapped the signs here to correct the left/right direction
     const rightX = -Math.cos(yaw);
     const rightZ = Math.sin(yaw);
 
-    const moveX = (Number(moveRight) - Number(moveLeft));
+    // Calculate movement inputs
+    // "moveRight" adds to position, "moveLeft" subtracts
+    // Since we fixed the vector math above, normal logic applies: (Right - Left)
+    const moveX = (Number(moveRight) - Number(moveLeft)); 
     const moveZ = (Number(moveForward) - Number(moveBackward));
 
     // Apply movement
