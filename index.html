@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Voxel Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Start Screen -->
+    <div id="start-screen">
+        <h1>VOXEL WORLD</h1>
+        <button id="start-btn">TAP TO PLAY</button>
+    </div>
+
+    <!-- UI Overlay (Hidden until play) -->
+    <div id="ui-container" style="display: none;">
+        
+        <!-- Crosshair -->
+        <div id="crosshair">+</div>
+
+        <!-- D-Pad (Grid Layout) -->
+        <div id="dpad">
+            <div id="btn-fwd" class="dpad-btn">▲</div>
+            <div id="btn-left" class="dpad-btn">◀</div>
+            <div id="btn-right" class="dpad-btn">▶</div>
+            <div id="btn-back" class="dpad-btn">▼</div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div id="actions">
+            <div class="action-row">
+                <button id="btn-break" class="action-btn">BREAK</button>
+                <button id="btn-place" class="action-btn">PLACE</button>
+            </div>
+            <button id="btn-jump" class="action-btn">JUMP</button>
+        </div>
+    </div>
+
+    <!-- Main Entry Point -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
